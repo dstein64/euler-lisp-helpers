@@ -3,7 +3,7 @@
 ;;; The Sieve of Eratosthenes code is from rosettacode.org
 ;;; http://rosettacode.org/wiki/Sieve_of_Eratosthenes#Common_Lisp
 (defun sieve-of-eratosthenes (maximum)
-  "Return a list of all prime numbers upto maximum."
+  "Return a list of all prime numbers up to maximum."
   (let ((composites (make-array (1+ maximum)
 				:element-type 'bit
 				:initial-element 0)))
@@ -23,7 +23,7 @@
 	  (cond ((> d max-d) (return (list n))) ; n is prime
 		((zerop (rem n d)) (return (cons d (factor (truncate n d)))))))))
 
-;; This can also be implemented using a sieve upto n, and then
+;; This can also be implemented using a sieve up to n, and then
 ;; checking if the last element equals n.
 (defun prime-p (n)
   "Checks whether n is prime."
